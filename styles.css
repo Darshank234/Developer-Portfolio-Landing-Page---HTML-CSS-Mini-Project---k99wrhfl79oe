@@ -1,1 +1,143 @@
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+}/* Hero Section */
+.hero-section {
+    position: relative;
+    background: url(https://img.freepik.com/premium-photo/html-system-websites-concept-photo_1015182-28171.jpg?size=626&ext=jpg&ga=GA1.1.710407200.1720003686&semt=ais_user);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+}
+.hero-text {
+    text-align: center;
+    margin: 0 auto;
+}
+.hero-text h2{
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 2px 2px #040404;
+}
+.hero-text h2 > span {
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 2px 2px #15f76b;
+}
+.hero-text h1 {
+    font-size: 4em;
+    color: #fff;
+    text-shadow: 2px 2px #ff0000;
+    margin-top: 0;
+}
+/* Black Box Section */
+.black-box-section {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+.black-box-section h3 {
+    font-size: 70px;
+    font-weight: 200;
+}
+.black-box-section span {
+    font-size: 96px;
+    font-weight: 400;
+}
+/* Card Container Section */
 
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(autofit, minmax(340px, 1fr));
+    gap: 20px;
+    padding: 2em;
+    justify-content: center;
+   
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    max-width: 340px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.card-content {
+    text-align: center;
+    padding: 1em;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+
+.card-content h3 {
+    margin: 0.5em 0;
+}
+/* Bottom Section */
+
+.bottom-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 2em 0;
+    flex-wrap: wrap;
+}
+
+.contact-me, .about-me {
+    flex: 1 1 45%;
+    padding: 2em;
+    color: #fff;
+    margin: 30px;
+    box-sizing: border-box;
+    
+}
+
+.contact-me h1, .about-me h1 {
+    font-size: 2em;
+}
+.contact-me {
+    background-color: #495400;
+}
+
+.about-me {
+    background-color: #661905;
+}
+/* Responsive Styles */
+
+@media screen and (max-width: 786px) {
+    .hero-section {
+        height: 50vh;
+    }
+    
+    .black-box-section h3 {
+        font-size: 24px;
+    }
+    .black-box-section span {
+        font-size: 32px;
+    }
+
+    .bottom-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-me, .about-me {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+}
