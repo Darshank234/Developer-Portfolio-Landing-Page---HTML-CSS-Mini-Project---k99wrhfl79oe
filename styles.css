@@ -53,10 +53,9 @@ body {
 
 .card-container {
     display: grid;
-    grid-template-columns: repeat(autofit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 20px;
-    padding: 2em;
-    justify-content: center;
+    
    
 }
 
@@ -64,30 +63,34 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .card {
     max-width: 340px;
     height: 400px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    
+   
 }
 .card-content {
+    display: grid;
     text-align: center;
-    padding: 1em;
+    gap: 10px;
+    grid-template-columns: 1fr;
 }
 
 .card img {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
 }
 
 
 .card-content h3 {
-    margin: 0.5em 0;
+    margin: 20px;
 }
 /* Bottom Section */
 
@@ -117,12 +120,46 @@ body {
 .about-me {
     background-color: #661905;
 }
+/* Add some basic styling to the contact and about me sections */
+.contact-me ul, .about-me ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .contact-me li, .about-me li {
+    margin-bottom: 10px;
+  }
+  
+  .contact-me a, .about-me a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .contact-me a:hover, .about-me a:hover {
+    text-decoration: underline;
+  }
+  
+  .about-me ul {
+    margin-top: 20px;
+  }
 /* Responsive Styles */
 
 @media screen and (max-width: 786px) {
+    
     .hero-section {
         height: 50vh;
     }
+    .card-container {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+      }
+      .grid-item {
+        flex-direction: column;
+      }
+      .card {
+        max-width: 100%;
+        height: auto;
+      }
     
     .black-box-section h3 {
         font-size: 24px;
